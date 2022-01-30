@@ -1,0 +1,189 @@
+<template>
+    <header :class="{ 'scrolled-nav' : scrolledNav }" class="relative transition duration-500">
+    <nav>
+        <div class=" px-6 sm:px-6 lg:pl-16 lg:py-4 xl:pl-32">
+            <div class="nav-content flex items-center justify-between">
+                <div @click="reloadPage" class="image-div cursor-pointer flex items-center h-16">
+                    <img class="image md:w-32 lg:w-36 xl:w-40" src="../assets/images/MUNGINLogo.png"/>
+                </div>
+                <div class="nav-links hidden lg:block" v-show="!mobile"> 
+                <ul class="flex items-center">
+                    <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
+                    <li @click="firstHomeLink = !firstHomeLink" class=" font-serif  font-bold text-base mx-6 relative"><router-link to="/">Process</router-link><Seed v-if="firstHomeLink" class="absolute left-2"/></li>
+                    <li @click="secHomeLink = !secHomeLink" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Our mission</router-link><Seed v-show="secHomeLink" class="absolute left-2"/></li>
+                    <li @click="thirdHomeLink = !thirdHomeLink" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">News</router-link><Seed v-show="thirdHomeLink" class="absolute left-2"/></li>
+                    <li @click="lastHomeLink = !lastHomeLink" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-show="lastHomeLink" class="absolute left-2"/></li>
+                    <div class="">
+                        <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Search</button>
+                        <!-- <router-link to="login">
+                            <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Login</button>
+                        </router-link> -->
+                    </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="icon flex absolute items-center right-6 lg:right-16 top-1/4"> 
+                <img @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav}" class=" img w-8 md:w-10"   src="https://img.icons8.com/material/50/000000/menu--v1.png"/>
+            </div>
+            <transition name="mobile-nav">
+            <ul v-show="mobileNav" class="dropdown-nav absolute w-1/2 h-screen top-0 right-0  py-4 flex flex-col gap-y-4">  
+                <div class="ml-2 md:mt-1 lg:mt-3">
+                <CancelSvg @click="toggleIsSelected" :class="{ 'selected' : isSelected }"/>
+                </div>    
+                <li class="mt-20 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold hover:cursor-pointer active:cursor-pointer hover:active:ease-in-out active:ease-in-out duration-1000"><router-link to="/">Home</router-link></li>
+                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Process</li>
+                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Our mission</li>
+                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">News</li>
+                <li class="font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000"><router-link to="join-waiting-list">Join Waiting List</router-link></li>
+                <div class="flex flex-col gap-y-4 items-center justify-center">
+                    <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Search</button>
+                    <!-- <router-link to="login">
+                        <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Login</button>
+                    </router-link> -->
+                </div>
+            </ul>
+            </transition>
+        </div>
+    </nav>
+    </header>
+</template>
+
+<script>
+import CancelSvg from '../components/CancelSvg.vue'
+import Seed from '../components/Seed.vue'
+export default {
+    data() {
+      return {
+          isSelected: false,
+          scrolledNav: null,          
+          mobile: false,          
+          mobileNav: null,
+          windowWidth: null, 
+          firstHomeLink: false,
+          secHomeLink: false,
+          thirdHomeLink: false,
+          lasthomeLink: false,
+        }
+    },
+    props: ['color'],
+    components: {
+        CancelSvg,
+        Seed     
+    },
+    created() {
+            window.addEventListener("resize", this.checkScreen);
+            this.checkScreen();
+    },
+    methods() {
+        window.addEventListener( "scroll", this.updateScroll);
+    },
+     methods: { 
+        toggleMobileNav() {
+            this.mobileNav = !this.mobileNav;
+        },
+        toggleIsSelected() {
+          this.mobileNav = !this.mobileNav;
+        },
+        updateScroll() {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 50) {
+                this.scrolledNav = true;
+                return;
+            }
+                this.scrolledNav = false;
+        },
+        checkScreen() {
+            this.windowWidth = window.innerWidth
+            if (this.windowWidth <= 1024) {
+                this.mobile = true;
+                return; 
+            }
+                this.mobile = false;
+                this.mobileNav = false;
+                return;
+        },
+        reloadPage() {
+            window.location.reload();
+        },
+        mouseOver() {
+            this.homeLink = !this.homeLink;
+        }
+     }
+    // methods: {
+    //     reloadPage() {
+    //         window.location.reload();
+    //     },
+    //     toggleMobileNav() {
+    //         this.mobileNav = !this.mobileNav;
+    //     },
+
+    //     toggleIsSelected() {
+    //         this.mobileNav = !this.mobileNav;
+    //     },
+
+    //     toggleInput() {
+    //         this.input = !this.input;
+    //     },
+
+    //     updateScroll() {
+    //         const scrollPosition = window.scrollY;
+    //         if (scrollPosition > 50) {
+    //             this.scrolledNav = true;
+    //             return;
+    //         }
+    //             this.scrolledNav = false;
+    //     },
+
+    //     checkScreen() {
+    //         this.windowWidth = window.innerWidth
+    //         if (this.windowWidth <= 1024) {
+    //             this.mobile = true;
+    //             return; 
+    //         }
+    //             this.mobile = false;
+    //             this.mobileNav = false;
+    //             return;
+    //     }
+    // },
+    // created() {
+    //         window.addEventListener("resize", this.checkScreen);
+    //         this.checkScreen();
+    // },
+    // methods() {
+    //     window.addEventListener( "scroll", this.updateScroll);
+    // },
+}
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Raleway'; 
+}
+.dropdown-nav {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); 
+    background-color: #83BF4F;
+}
+
+.nav-content {
+    width: 87%;
+}
+
+button {
+    background-color: #17233C;
+}
+
+li:hover, 
+li:active {
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  /* background-image: url(../assets/images/seedOutline.png); */
+}
+
+@media (min-width: 1024px) {
+    .icon { 
+        top: 35%;
+    }
+}
+</style>
