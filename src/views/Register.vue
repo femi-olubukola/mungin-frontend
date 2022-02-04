@@ -1,7 +1,7 @@
 <template>
     <div class="forgot-password bg-center bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${image})`}">
         <Navigation :color="color"/>
-        <div class="register-content px-6 mt-12 py-6">
+        <div class="register-content px-6 md:px-10 mt-12 py-6">
             <div class=" text-center mb-6">
                 <h1 class="uppercase text-black font-serif text-lg md:text-2xl lg:text-3xl font-bold">Register</h1>
             </div>

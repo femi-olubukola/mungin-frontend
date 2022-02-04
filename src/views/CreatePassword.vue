@@ -1,7 +1,7 @@
 <template>
     <div class="forgot-password h-screen bg-center bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${image})`}">
         <Navigation/>
-        <div class="forgot-password-content px-6 sm:px-6 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16 xl:ml-12 mt-20">
+        <div class="forgot-password-content px-6 sm:px-6 md:px-10 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16 xl:ml-12 mt-20">
             <form @submit.prevent="handleSubmit">
                 <div class="w-10/12 flex justify-start">
                     <label class=" font-medium font-serif text-base md:text-lg text-black">Create new password</label>

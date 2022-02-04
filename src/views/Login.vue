@@ -1,7 +1,7 @@
 <template>
     <div class="login relative h-screen bg-center bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${image})` }">
         <Navigation  :color="color"/>
-        <div class=" px-6 sm:px-6 lg:pl-32 mt-16">
+        <div class=" px-6 sm:px-6 md:px-10 lg:pl-32 mt-16">
             <form @submit.prevent="handleSubmit" class="flex justify-start flex-col xl:-ml-4">
                 <div class="w-3/12 flex justify-start mb-4 pl-4">
                     <label class=" font-medium font-serif text-base text-black">Username/Email</label>

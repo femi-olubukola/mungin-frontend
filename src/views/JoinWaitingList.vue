@@ -1,7 +1,7 @@
 <template>
     <div :style="{ backgroundImage: `url(${image})` }" class="h-screen join-waiting-list bg-cover bg-center">
         <Navigation :color="color"/>
-        <div class="content px-6 sm:px-6 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16">
+        <div class="content px-6 sm:px-6 md:px-10 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16">
         <div class="mt-10 xl:mt-2 mb-4 xl:mb-2">
             <div class="text-black font-medium font-serif text-base flex justify-start sm:w-1/2 lg:w-5/12 xl:w-4/12 xl:-ml-4">
                 Please note: all fields are required.

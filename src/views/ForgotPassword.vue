@@ -1,7 +1,7 @@
 <template>
     <div class="forgot-password h-screen bg-center bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${image})` }">
         <Navigation :color="color"/>
-        <div class=" px-6 sm:px-6 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16">
+        <div class=" px-6 sm:px-6 md:px-10 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16">
             <div class="forgot-password-content w-11/12 flex justify-start mt-28 mr-4 md:mb-2">
                 <h1 class=" font-medium font-serif text-base text-black">Forgot your password? it happens to the best of us.</h1>
             </div>
