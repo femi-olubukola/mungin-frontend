@@ -8,7 +8,9 @@
                 <p class="ml-0.5 text-left text-xs md:text-sm font-normal md:font-medium font-serif w-full lg:w-full xl:w-11/12" :style="{color: `${paragraphSecColor}`}">{{ description }}</p>
                 <div class="flex space-x-1 items-center">
                     <button class="uppercase font-serif mt-4 lg:font-bold" :style="{color: `${buttonColor}`}">{{ button }}</button>
-                    <ReadMoreButtonSvg class="pt-3"/>
+                    <router-link to="path">
+                        <ReadMoreButtonSvg class="pt-3"/>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -25,7 +27,7 @@ export default {
             buttonColor: '#83BF4F'
         }
     },
-    props: ['image', 'date', 'header', 'description', 'button'],
+    props: ['image', 'date', 'header', 'description', 'button', 'path'],
     components: {
         ReadMoreButtonSvg
     }

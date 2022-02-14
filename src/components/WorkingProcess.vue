@@ -5,7 +5,7 @@
             <h2 class="text-center text-xl sm:text-3xl md:text-3xl xl:text-4xl font-medium sm:font-semibold lg:font-bold  font-serif">Working Process</h2>
             <div class=" workingProcessSecContent flex flex-col justify-center items-center mt-6">
                 <div class="lg:-mt-1 xl:-mt-5 relative">
-                    <div class="flex flex-col justify-center items-center md:pb-1 lg:pb-0">
+                    <div class="flex flex-col justify-center items-center md:pb-1 lg:pb-0 cursor-pointer">
                         <img @mouseover="upHere = true" @mouseleave="upHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
                         <img v-show="upHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="md:-mt-5 lg:-mt-1 xl:-mt-5 relative xl:full">
-                    <div class="flex flex-col justify-center items-center">
+                    <div class="flex flex-col justify-center items-center cursor-pointer">
                         <img @mouseover="upSecHere = true" @mouseleave="upSecHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
                         <img v-show="upSecHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="lg:-mt-1 xl:-mt-5">
-                    <div class="flex flex-col justify-center items-center md:pb-1">
+                    <div class="flex flex-col justify-center items-center md:pb-1 cursor-pointer">
                         <img @mouseover="upThirdHere = true" @mouseleave="upThirdHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
                         <img v-show="upThirdHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>

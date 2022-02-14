@@ -43,7 +43,8 @@ export default {
                     articleDate: '23 July 2021',
                     articleHeader: 'Crop Launching in Nigeria',
                     articleDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit consectetur adipiscing consectetur adipiscing elit consectetur',
-                    articleReadMore: 'Read More'
+                    articleReadMore: 'Read More',
+                    // articlePath: "path: '/'
                 },
                 {
                     id: 1,
@@ -51,7 +52,8 @@ export default {
                     articleDate: '23 July 2021',
                     articleHeader: 'Crop Launching in Nigeria',
                     articleDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit consectetur adipiscing consectetur adipiscing elit consectetur',
-                    articleReadMore: 'Read More'
+                    articleReadMore: 'Read More',
+                    // articlePath: "path: '/register'"
                 },
                 {
                     id: 2,
@@ -59,7 +61,8 @@ export default {
                     articleDate: '23 July 2021',
                     articleHeader: 'Crop Launching in Nigeria',
                     articleDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing elit consectetur adipiscing consectetur adipiscing elit consectetur',
-                    articleReadMore: 'Read More'
+                    articleReadMore: 'Read More',
+                    // articlePath: "path: '/create-password'"
                 }
             ]
         }

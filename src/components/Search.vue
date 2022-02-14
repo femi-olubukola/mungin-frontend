@@ -1,6 +1,6 @@
 <template>
     <div @submit="prevent" class="mx-36 flex flex-row justify-center">
-        <input class="font-serif w-9/12" @keydown.enter="changeNews" type="text" v-model="searchQ" placeholder="Search"/>
+        <input class="font-serif w-9/12 text-black" @keydown.enter="changeNews" type="text" v-model="searchQ" placeholder="Search"/>
             <div class="secsearchbtn">
                 <SecSearchButton v-on:click="changeNews"/>
             </div>
@@ -52,7 +52,7 @@ input[type=text] {
 }
 
 ::placeholder {
-    color: rgb(17, 17, 17);    
+    color: #000;    
 }
 
 </style>
