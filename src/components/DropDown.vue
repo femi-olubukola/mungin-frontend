@@ -24,7 +24,7 @@
           class="MenuItems absolute right-0 w-56 lg:w-72 mt-2 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         >
           <div class="px-2.5 lg:px-4 py-12 md:py-11">
-            <MenuItem class="pb-2 lg:pb-3" v-slot="{ active }">
+            <MenuItem class="pb-2 lg:pb-3" v-slot="{ active }" v-model="myModel">
               <button
                 :class="[
                   active ? 'bg-violet-500 ' : 'font-serif font-medium',
@@ -143,7 +143,8 @@ export default {
   },
   data() {
       return {
-          color: '#fafafa'
+          color: '#fafafa',
+          myModel:{},
       }
   }
 }

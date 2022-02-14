@@ -12,7 +12,8 @@
                 <div class="lg:flex lg:flex-row lg:space-x-72"> 
                     <div class="">
                         <div class="relative flex lg:block flex-col justify-center lg:justify-start items-center md:pb-1 lg:pb-0">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upHere = true" @mouseleave="upHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <FirstMissionSvg class="absolute hidden lg:block -right-16 top-10"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center lg:justify-start items-center pb-2 lg:pb-0 md:-pt-1 lg:ml-7">    
@@ -24,7 +25,8 @@
                     </div>
                     <div class="">
                         <div class="relative flex lg:block flex-col justify-center items-center md:pb-1 lg:pb-0 lg:pr-2">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upFirstHere = true" @mouseleave="upFirstHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upFirstHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <SecondMissionSvg class="absolute hidden lg:block -left-9 top-8"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center items-center pb-2 lg:pb-0 lg:ml-7">    
@@ -38,7 +40,8 @@
                 <div class="lg:flex flex-row lg:space-x-52 lg:mt-6">
                     <div class="">
                         <div class="relative flex lg:block flex-col justify-center items-center md:pb-1 lg:pb-0">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upSecHere = true" @mouseleave="upSecHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upSecHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <ThirdMissionSvg class="absolute hidden lg:block -right-1 top-0"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center items-center pb-2 lg:pb-0 md:-pt-1 lg:pt-0 lg:ml-7">    
@@ -50,7 +53,8 @@
                     </div>
                     <div class="">
                         <div class="relative flex lg:block flex-col justify-center items-center md:pb-1 lg:pb-0">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upThirdHere = true" @mouseleave="upThirdHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upThirdHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <FourthMissionSvg class="absolute hidden lg:block -left-7 top-10"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center items-center pb-2 lg:pb-0 md:-pt-1 lg:-pt-0 lg:ml-6 xl:ml-8">    
@@ -64,7 +68,8 @@
                 <div class="lg:flex flex-row lg:space-x-56  lg:mt-6">
                     <div class="">
                         <div class="relative flex lg:block flex-col justify-center items-center md:pb-1 lg:pb-0">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upFourthHere = true" @mouseleave="upFourthHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upFourthHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <FifthMissionSvg class="absolute hidden lg:block -right-3 top-0"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center items-center pb-2 lg:pb-0 md:-pt-1 lg:pt-0 lg:ml-7">    
@@ -76,7 +81,8 @@
                     </div>
                     <div class="">
                         <div class="flex relative lg:block flex-col justify-center items-center md:pb-1 lg:pb-0">
-                            <img src="../assets/images/OurMissionLogo.png"/>
+                            <img @mouseover="upFifthHere = true" @mouseleave="upFifthHere = false" src="../assets/images/OurMissionLogo.png"/>
+                            <img v-show="upFifthHere" class="absolute -top-2.5 -left-0.5" src="../assets/images/Munji.png"/>
                             <SixthMissionSvg class="absolute hidden lg:block -left-9 top-0"/>
                         </div>
                         <div class="flex lg:block flex-col justify-center items-center pb-2 lg:pb-0 md:-pt-1 lg:-pt-0 lg:ml-5 xl:ml-7">    
@@ -104,7 +110,14 @@ export default {
     data() {
         return {
             bgColor: '#f8f8f8',
-            paragraphColor: '#7D7D7D'
+            paragraphColor: '#7D7D7D',
+            upHere: false,
+            upFirstHere: false,
+            upSecHere: false,
+            upThirdHere: false,
+            upFourthHere: false,
+            upFifthHere: false,
+
         }
     },
     components: {

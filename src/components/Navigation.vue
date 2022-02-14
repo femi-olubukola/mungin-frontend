@@ -6,35 +6,42 @@
                 <div @click="reloadPage" class="image-div cursor-pointer flex items-center h-16">
                     <img class="image md:w-32 lg:w-36 xl:w-40" src="../assets/images/MUNGINLogo.png"/>
                 </div>
-                <div class="nav-links hidden lg:block" v-show="!mobile"> 
+                <div class="nav-links hidden xl:block" v-show="!mobile"> 
                 <ul class="flex items-center">
                     <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
                     <li @mouseover="secHover = true" @mouseleave="secHover = false" class=" font-serif  font-bold text-base mx-6 relative"><router-link to="/">Process</router-link><Seed v-if="secHover"  class="absolute left-5"/></li>
                     <li @mouseover="thirdHover = true" @mouseleave="thirdHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Our mission</router-link><Seed v-if="thirdHover" class="absolute left-7"/></li>
                     <li @mouseover="fourthHover = true" @mouseleave="fourthHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">News</router-link><Seed v-if="fourthHover" class="absolute left-2"/></li>
-                    <li @mouseover="fifthHover = true" @mouseleave="fifthHover = false" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-if="fifthHover" class="absolute left-10"/></li>
-                    <div class="">
-                        <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Search</button>
-                    </div>
+                    <!-- <li @mouseover="fifthHover = true" @mouseleave="fifthHover = false" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-if="fifthHover" class="absolute left-10"/></li> -->
                     </ul>
                 </div>
+                <div class="form hidden xl:block" >
+                    <SearchButton class="searchbutton cursor-pointer" @click="toggleInput"/>
+                    <transition 
+                    enter-active-class="transition duration-100 ease-in-out"
+                    enter-from-class="transform scale-95 opacity-0"
+                    enter-to-class="transform scale-100 opacity-100"
+                    leave-active-class="transition duration-75 ease-in-out"
+                    leave-from-class="transform scale-100 opacity-100"
+                    leave-to-class="transform scale-95 opacity-0">
+                        <Search v-show="input" class="absolute left-0 w-9/12 -bottom-8"/>
+                    </transition>
+                </div>
             </div>
-            <div class="icon flex absolute items-center right-6 lg:right-16 top-1/4"> 
-                <img @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav}" class=" img w-8 md:w-10"   src="https://img.icons8.com/material/50/000000/menu--v1.png"/>
+            <div class="icon flex absolute items-center right-6 lg:right-16 top-1/4 sm:top-1/3"> 
+                <img @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav}" class=" img w-8"   src="https://img.icons8.com/material/50/000000/menu--v1.png"/>
             </div>
             <transition name="mobile-nav">
             <ul v-show="mobileNav" class="dropdown-nav absolute w-1/2 h-screen top-0 right-0  py-4 flex flex-col gap-y-4">  
                 <div class="ml-2 md:mt-1 lg:mt-3">
                 <CancelSvg @click="toggleIsSelected" :class="{ 'selected' : isSelected }"/>
                 </div>    
-                <li class="mt-20 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold hover:cursor-pointer active:cursor-pointer hover:active:ease-in-out active:ease-in-out duration-1000"><router-link to="/">Home</router-link></li>
-                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Process</li>
-                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Our mission</li>
-                <li class=" font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">News</li>
-                <li class="font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000"><router-link to="join-waiting-list">Join Waiting List</router-link></li>
-                <div class="flex flex-col gap-y-4 items-center justify-center">
-                    <button class="font-medium h-10 w-24 rounded-xl text-white font-serif">Search</button>
-                </div>
+                <li class="mt-20 pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold hover:cursor-pointer active:cursor-pointer hover:active:ease-in-out active:ease-in-out duration-1000"><router-link to="/">Home</router-link></li>
+                <li class="pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Process</li>
+                <li class="pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Our mission</li>
+                <li class="pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">News</li>
+                <!-- <li class="font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000"><router-link to="join-waiting-list">Join Waiting List</router-link></li> -->
+            
             </ul>
             </transition>
         </div>
@@ -45,6 +52,8 @@
 <script>
 import CancelSvg from '../components/CancelSvg.vue'
 import Seed from '../components/Seed.vue'
+import SearchButton from './SearchBtn.vue'
+import Search from '../components/Search.vue'
 export default {
     data() {
       return {
@@ -59,12 +68,16 @@ export default {
           thirdHover: false,
           fourthHover: false,
           fifthHover: false,
+          input: false
         }
     },
     props: ['color'],
     components: {
         CancelSvg,
-        Seed     
+        Seed,     
+        SearchButton,
+        Search
+
     },
     created() {
             window.addEventListener("resize", this.checkScreen);
@@ -90,7 +103,7 @@ export default {
         },
         checkScreen() {
             this.windowWidth = window.innerWidth
-            if (this.windowWidth <= 1024) {
+            if (this.windowWidth <= 1280) {
                 this.mobile = true;
                 return; 
             }
@@ -103,7 +116,10 @@ export default {
         },
         mouseOver() {
             this.homeLink = !this.homeLink;
-        }
+        },
+        toggleInput() {
+            this.input = !this.input;
+        },
      }
 }
 </script>

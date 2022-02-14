@@ -6,7 +6,8 @@
             <div class=" workingProcessSecContent flex flex-col justify-center items-center mt-6">
                 <div class="lg:-mt-1 xl:-mt-5 relative">
                     <div class="flex flex-col justify-center items-center md:pb-1 lg:pb-0">
-                        <img class="" src="../assets/images/FieldTrial.png"/>
+                        <img @mouseover="upHere = true" @mouseleave="upHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
+                        <img v-show="upHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>
                     <FirstLine class="absolute left-64 top-7 hidden xl:block"/>
                     <div class="flex flex-col justify-center items-center lg:mt-5">
@@ -16,9 +17,10 @@
                         <p class="text-center text-xs md:text-sm font-normal md:font-medium font-serif w-10/12 sm:w-8/12 md:w-10/12 lg:w-10/12 xl:w-8/12" :style="{color: `${paragraphColor}`}">Lorem ipsum dolor sit amet, consectetur adipiscing elit.consectetur adipiscing eli</p>
                     </div>
                 </div>
-                <div class="md:-mt-5 lg:-mt-0 xl:-mt-3 relative xl:full">
+                <div class="md:-mt-5 lg:-mt-1 xl:-mt-5 relative xl:full">
                     <div class="flex flex-col justify-center items-center">
-                        <img src="../assets/images/Munji.png"/>
+                        <img @mouseover="upSecHere = true" @mouseleave="upSecHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
+                        <img v-show="upSecHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>
                     <SecondLine class="absolute hidden -right-32 top-10 xl:block"/>
                     <div class="flex flex-col justify-center items-center pb-2 md:-pt-1">    
@@ -30,7 +32,8 @@
                 </div>
                 <div class="lg:-mt-1 xl:-mt-5">
                     <div class="flex flex-col justify-center items-center md:pb-1">
-                        <img src="../assets/images/SecondFieldTrial.png"/>
+                        <img @mouseover="upThirdHere = true" @mouseleave="upThirdHere = false" class="relative" src="../assets/images/FieldTrial.png"/>
+                        <img v-show="upThirdHere" class="absolute" src="../assets/images/Munji.png"/>
                     </div>
                     <div class="flex flex-col justify-center items-center pb-2 md:pb-0 lg:mt-5">      
                         <h3 class="font-serif text-sm md:text-base font-medium md:font-semibold pb-2">Digital field trials</h3>
@@ -53,7 +56,10 @@ export default {
         return {
             textColor: '#b8b8b8',
             paragraphColor: '#979797',
-            paragraphMidColor: '#5B5B5B'
+            paragraphMidColor: '#5B5B5B',
+            upHere: false,
+            upSecHere: false,
+            upThirdHere: false,
         }
     },
     components: {

@@ -7,13 +7,18 @@
                 <div class="text-xl sm:text-3xl md:text-3xl  xl:text-4xl font-medium sm:font-semibold lg:font-bold font-serif mr-6 sm:mr-10">immediate impact.</div>  
                 <div class="text-sm md:text-base font-normal sm:font-medium font-serif  sm:w-full mt-4 md:w-10/12 lg:w-10/12 xl:w-8/12">At Mungin we transform data to actionable insights that power decision making across the agricultural value chain.Delivering innovative Agtech Solutions to improve agricultural productivity in Nigeria is our ethos</div>
                 <div class="flex  md:justify-start buttons gap-x-2 md:gap-x-4 mt-4">
-                    <button class="firstButton font-serif font-medium text-sm md:text-base text-white flex justify-center items-center h-10 w-32 md:w-40 lg:w-44 rounded-lg">Search Our Database</button>
+                    <button class="firstButton font-serif font-medium text-sm md:text-base text-white flex justify-center items-center h-10 w-32 md:w-40 lg:w-52 rounded-lg">Search Our Database</button>
                       <router-link to="join-waiting-list">
-                        <button class="secButton font-serif flex justify-center items-center font-medium text-sm md:text-base h-10 w-32 md:w-40 lg:w-44 rounded-lg">
+                        <button class="secButton font-serif flex justify-center items-center font-medium text-sm md:text-base h-10 w-32 md:w-40 lg:w-52 rounded-lg">
                           Join Waiting List
                         </button>
                       </router-link>
-                </div>     
+                </div>  
+                <router-link to="login">
+                    <button class="firstButton mt-2 font-serif font-medium text-sm md:text-base text-white flex justify-center items-center h-10 w-32 md:w-40 lg:w-52 rounded-lg">
+                        Login
+                    </button>
+                </router-link>   
                 </div>
         </div>   
         <WorkingProcess/>
