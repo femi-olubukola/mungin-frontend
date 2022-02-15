@@ -4,7 +4,7 @@
         <div class=" px-6 sm:px-6 md:px-10 lg:pl-16 lg:py-4 xl:pl-32">
             <div class="nav-content flex items-center justify-between">
                 <div @click="reloadPage" class="image-div cursor-pointer flex items-center h-16">
-                    <img class="image md:w-32 lg:w-36 xl:w-40" src="../assets/images/MUNGINLogo.png"/>
+                    <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
                 </div>
                 <div class="nav-links hidden xl:block" v-show="!mobile"> 
                 <ul class="flex items-center">
@@ -13,7 +13,7 @@
                     <li @mouseover="thirdHover = true" @mouseleave="thirdHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Our mission</router-link><Seed v-if="thirdHover" class="absolute left-7"/></li>
                     <li @mouseover="fourthHover = true" @mouseleave="fourthHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">News</router-link><Seed v-if="fourthHover" class="absolute left-2"/></li>
                     <!-- <li @mouseover="fifthHover = true" @mouseleave="fifthHover = false" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-if="fifthHover" class="absolute left-10"/></li> -->
-                    </ul>
+                    </ul>       
                 </div>
                 <div class="form hidden xl:block" >
                     <SearchButton class="searchbutton cursor-pointer" @click="toggleInput"/>
@@ -28,7 +28,7 @@
                     </transition>
                 </div>
             </div>
-            <div class="icon flex absolute items-center right-6 lg:right-16 top-1/4 sm:top-1/3"> 
+            <div class="icon flex absolute items-center right-6 md:right-10 lg:right-16 top-1/4 sm:top-1/3"> 
                 <img @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav}" class=" img w-8"   src="https://img.icons8.com/material/50/000000/menu--v1.png"/>
             </div>
             <transition name="mobile-nav">

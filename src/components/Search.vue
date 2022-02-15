@@ -30,13 +30,13 @@ export default {
 
 <style>
 .secsearchbtn {
-    border: 1px solid #ddd; 
+    border: 1px dotted #000; 
     border-radius: 5px;
     padding: 0.5rem;
 }
 
 input[type=text] {
-    border: 1px solid #ddd;
+    border: 1px dotted #000;
     box-sizing: border-box;
     border-radius: 5px;
     background: transparent;

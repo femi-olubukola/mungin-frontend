@@ -5,6 +5,8 @@ import Login from '../views/Login.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
 import CreatePassword from '../views/CreatePassword.vue'
 import Register from '../views/Register.vue'
+import ReadMore from '../views/ReadMore.vue'
+import ReaadMore from '../views/ReaadMore.vue'
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: Register
+  },
+  {
+    path: '/read-more',
+    name: 'ReadMore',
+    component: ReadMore
+  },
+  {
+    path: '/readMore',
+    name: 'ReaadMore',
+    component: ReaadMore
   }
 ]
 

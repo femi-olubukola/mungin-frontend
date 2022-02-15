@@ -1,5 +1,5 @@
 <template>
-    <div class="article">
+    <div class="article bg-white">
         <div class="article-content px-6 md:px-10 lg:px-16 xl:px-32 py-10">
             <h2 class="text-left text-xl sm:text-3xl md:text-3xl xl:text-4xl font-medium sm:font-semibold lg:font-bold  font-serif">Latest News & Articles</h2>
             <div class="flex items-center justify-between">
