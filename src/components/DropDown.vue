@@ -11,7 +11,7 @@
           />
         </MenuButton>
       </div>
-
+      
       <transition
         enter-active-class="transition duration-100 ease-out"
         enter-from-class="transform scale-95 opacity-0"
@@ -25,13 +25,7 @@
         >
           <div class="px-2.5 lg:px-4 py-12 md:py-11">
             <MenuItem class="pb-2 lg:pb-3" v-slot="{ active }" v-model="myModel">
-              <button
-                :class="[
-                  active ? 'bg-violet-500 ' : 'font-serif font-medium',
-                  'group flex rounded-md items-center w-full text-sm lg:text-base',
-                ]"
-                style="color: #fafafa"
-              >
+              <button @click="selectedItem()" :class="[active ? 'bg-violet-500 ' : 'font-serif font-medium','group flex rounded-md items-center w-full text-sm lg:text-base',]" style="color: #fafafa">
                 <Seed
                   :active="active"
                   class="w-5 h-5 flex items-center mr-2 text-violet-400"
@@ -144,8 +138,13 @@ export default {
   data() {
       return {
           color: '#fafafa',
-          myModel:{},
+          selectedItem: null,
       }
+  },
+  methods: {
+    selectedItem() {
+      this.selectedItem
+    }
   }
 }
 </script>

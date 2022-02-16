@@ -37,7 +37,7 @@
                     <label class=" font-medium text-base text-black flex justify-start ">Region</label>
                 </div>
                 <div  class="relative">
-                    <input v-model="region" class="pr-1 my-3 font-serif font-normal text-sm text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                    <input v-model="region" placeholder="{{ selectedItem }}" class="pr-1 my-3 font-serif font-normal text-sm text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
                     <DropDown class="dropdown absolute right-1 sm:right-20 md:right-14 lg:right-36 top-3 md:top-5 "/>
                 </div>
                 <div class="w-8/12 font-serif">

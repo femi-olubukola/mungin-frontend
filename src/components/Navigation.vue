@@ -9,9 +9,9 @@
                 <div class="nav-links hidden xl:block" v-show="!mobile"> 
                 <ul class="flex items-center">
                     <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
-                    <li @mouseover="secHover = true" @mouseleave="secHover = false" class=" font-serif  font-bold text-base mx-6 relative"><router-link to="/">Process</router-link><Seed v-if="secHover"  class="absolute left-5"/></li>
-                    <li @mouseover="thirdHover = true" @mouseleave="thirdHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Our mission</router-link><Seed v-if="thirdHover" class="absolute left-7"/></li>
-                    <li @mouseover="fourthHover = true" @mouseleave="fourthHover = false" class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">News</router-link><Seed v-if="fourthHover" class="absolute left-2"/></li>
+                    <li @click="scrollToProcess" @mouseover="secHover = true" @mouseleave="secHover = false" class=" font-serif  font-bold text-base mx-6 relative">Process<Seed v-if="secHover"  class="absolute left-5"/></li>
+                    <li @click="scrollToOurMission" @mouseover="thirdHover = true" @mouseleave="thirdHover = false" class=" font-serif font-bold text-base mx-6 relative">Our mission<Seed v-if="thirdHover" class="absolute left-7"/></li>
+                    <li @click="scrollToArticles" @mouseover="fourthHover = true" @mouseleave="fourthHover = false" class=" font-serif font-bold text-base mx-6 relative">News<Seed v-if="fourthHover" class="absolute left-2"/></li>
                     <!-- <li @mouseover="fifthHover = true" @mouseleave="fifthHover = false" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-if="fifthHover" class="absolute left-10"/></li> -->
                     </ul>       
                 </div>
@@ -24,7 +24,7 @@
                     leave-active-class="transition duration-75 ease-in-out"
                     leave-from-class="transform scale-100 opacity-100"
                     leave-to-class="transform scale-95 opacity-0">
-                        <Search v-show="input" class="absolute left-0 w-9/12 -bottom-8"/>
+                        <Search v-show="input" class="absolute left-0 w-9/12 -bottom-6"/>
                     </transition>
                 </div>
             </div>
@@ -120,7 +120,25 @@ export default {
         toggleInput() {
             this.input = !this.input;
         },
-     }
+        scrollToProcess() {
+            window.scrollTo({
+                top: 660,
+                behavior: "smooth"
+            })
+        },
+        scrollToOurMission() {
+            window.scrollTo({
+                top: 1050,
+                behavior: "smooth"
+            })
+        },
+        scrollToArticles() {
+            window.scrollTo({
+                top: 2000,
+                behavior: "smooth"
+            })
+        }
+    }
 }
 </script>
 

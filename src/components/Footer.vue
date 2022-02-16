@@ -21,9 +21,9 @@
                 </div>  
                 <div class="w-full flex justify-start mb-6">
                     <ul class="flex flex-col items-center justify-start">
-                        <li class="text-white font-serif font-normal text-sm pl-1 mb-1"><router-link to="/">Working Process</router-link><SeedSvg class="" v-if="homeLink"/></li>
-                        <li class="text-white font-serif font-normal text-sm pr-6 mb-1"><router-link to="process">Our Mission</router-link><SeedSvg v-if="homeLink"/></li>
-                        <li class="text-white font-serif font-normal text-sm"><router-link to="our-mission">News & Articles</router-link><SeedSvg v-if="homeLink"/></li>
+                        <li @click="scrollToProcess" class="text-white font-serif font-normal text-sm pl-1 mb-1 cursor-pointer">Working Process</li>
+                        <li @click="scrollToOurMission" class="text-white font-serif font-normal text-sm pr-6 mb-1 cursor-pointer">Our Mission</li>
+                        <li @click="scrollToArticles" class="text-white font-serif font-normal text-sm cursor-pointer">News & Articles</li>
                     </ul>
                 </div> 
             </div>   
@@ -51,6 +51,26 @@ export default {
     data() {
         return {
             pColor: 'rgba(255, 255, 255, 0.9)',
+        }
+    },
+    methods: {
+        scrollToProcess() {
+            window.scrollTo({
+                top: 660,
+                behavior: "smooth"
+            })
+        },
+        scrollToOurMission() {
+            window.scrollTo({
+                top: 1050,
+                behavior: "smooth"
+            })
+        },
+        scrollToArticles() {
+            window.scrollTo({
+                top: 2000,
+                behavior: "smooth"
+            })
         }
     }
 }

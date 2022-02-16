@@ -1,4 +1,4 @@
-<template>
+<template id="our-mission">
     <div class="our-mission" :style="{ backgroundColor: `${bgColor}` }">
         <div class="our-mission-content px-6 md:px-10 lg:px-16 xl:px-32 py-10 lg:py-20 xl:py-24">
             <div class="flex justify-center items-center mb-4">

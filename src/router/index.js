@@ -7,6 +7,7 @@ import CreatePassword from '../views/CreatePassword.vue'
 import Register from '../views/Register.vue'
 import ReadMore from '../views/ReadMore.vue'
 import ReaadMore from '../views/ReaadMore.vue'
+import OurMission from '../views/OurMission.vue'
 
 const routes = [
   {
@@ -48,12 +49,24 @@ const routes = [
     path: '/readMore',
     name: 'ReaadMore',
     component: ReaadMore
+  },
+  {
+    path: '/ourmission',
+    name: 'OurMission',
+    component: OurMission
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 export default router

@@ -58,13 +58,16 @@ export default {
         Footer,
         Articles
 
-     },
-     data() {
+    },
+    data() {
         return {
             bgColor: '#fafafa',
             color: '#83bf4f'
         }
-     }
+    },
+    mounted() {
+         window.scrollTo(0, 0)
+    }
 }
 </script>
 
