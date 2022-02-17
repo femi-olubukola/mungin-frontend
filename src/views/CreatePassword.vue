@@ -1,7 +1,7 @@
 <template>
     <div class="forgot-password h-screen bg-center bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${image})`}">
         <Navigation/>
-        <div class="forgot-password-content px-6 sm:px-6 md:px-10 lg:px-16  xl:px-20 flex flex-col justify-start lg:ml-16 xl:ml-12 mt-20">
+        <div class="forgot-password-content px-6 sm:px-6 md:px-10 lg:px-16  xl:pl-32 flex flex-col justify-start mt-20">
             <form @submit.prevent="handleSubmit">
                 <div class="w-10/12 flex justify-start">
                     <label class=" font-medium font-serif text-base md:text-lg text-black">Create new password</label>
@@ -9,7 +9,7 @@
                 <div class="py-4 relative">
                     <input 
                     :type="visibility" 
-                    v-model="createPassword" class="font-serif font-normal text-sm text-black pl-4 pr-10 sm:pr-8 md:pr-10 lg:pr-16 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
+                    v-model="createPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
                     <span class="flex justify-start items-center w-1/3">
                         <EyeVisibleNo class="no" @click="showPassword"/>
                         <EyeVisibleYes class="no" v-show="show"  @click="hidePassword"/>
@@ -21,7 +21,7 @@
                 <div class="py-4 relative">
                     <input 
                     :type="visibility" 
-                    v-model="newPassword" class="font-serif font-normal text-sm text-black pl-4 pr-10 sm:pr-8 md:pr-10 lg:pr-16 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
+                    v-model="newPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
                     <span class="flex justify-start items-center w-1/3">
                         <EyeVisibleNo class="no" @click="showPassword"/>
                         <EyeVisibleYes v-show="show" class="no"  @click="hidePassword"/>
@@ -83,14 +83,14 @@ export default {
     .no {
         position: absolute;
         right: 20%;
-        top: 1.75rem;
+        top: 1.60rem;
     }  
     
     @media (min-width: 640px)  {
     .no {
         position: absolute;
         right: 35%;
-        top: 1.75rem;
+        top: 1.60rem;
     }    
     } 
     @media (min-width: 768px)  {

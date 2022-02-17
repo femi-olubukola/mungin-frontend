@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .secsearchbtn {
     border: 1px dotted #000; 
     border-radius: 5px;

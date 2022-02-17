@@ -5,7 +5,7 @@
             <div class=" text-center mb-6">
                 <h1 class="uppercase text-black font-serif text-lg md:text-2xl lg:text-3xl font-bold">Register</h1>
             </div>
-            <div class="forgot-password-content w-full sm:w-9/12 md:w-6/12 flex justify-center sm:ml-10 md:ml-7  mr-4  mb-2">
+            <div class="forgot-password-content w-full sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-2/4 flex justify-start sm:justify-center xl:justify-start sm:ml-11 md:ml-9 lg:-ml-3 xl:ml-9 mb-2">
                 <h1 class=" font-medium font-serif text-sm lg:text-base text-black">Please note: all fields are required</h1>
             </div>
             <form @submit.prevent="handleSubmit" class="flex justify-center flex-col sm:ml-20 md:ml-24 xl:ml-48 sm:w-9/12 md:w-10/12 xl:w-8/12">
@@ -37,7 +37,7 @@
                     <label class=" font-medium text-base text-black flex justify-start ">Region</label>
                 </div>
                 <div  class="relative">
-                    <input v-model="region" placeholder="{{ selectedItem }}" class="pr-1 my-3 font-serif font-normal text-sm text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                    <input v-model="region" class="pr-1 my-3 font-serif font-normal text-sm text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
                     <DropDown class="dropdown absolute right-1 sm:right-20 md:right-14 lg:right-36 top-3 md:top-5 "/>
                 </div>
                 <div class="w-8/12 font-serif">
