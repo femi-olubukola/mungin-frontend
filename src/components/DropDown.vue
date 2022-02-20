@@ -2,8 +2,6 @@
     <div  class="relative">
         <input 
             :value="selectedItem.region"  
-            :v-model="region" 
-            @submit.prevent="submit"
             class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
             <ChevronDownIcon 
             @click="isVisible = !isVisible"
@@ -74,9 +72,6 @@ export default {
         selectItem(user) {
             this.selectedItem = user;
             this.isVisible = false;
-        },
-        submit() {
-            this.region = '';
         }
     },
     // mounted() {

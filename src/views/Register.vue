@@ -36,11 +36,31 @@
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Region</label>
                 </div>
-               <!--  <div  class="relative">
-                    <input v-model="region" class="pr-1 my-3 font-serif font-normal text-sm text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
-                    <DropDown class="dropdown absolute right-1 sm:right-20 md:right-14 lg:right-36 top-3 md:top-5 "/>
-                </div> -->
-                <DropDown/>
+                <div  class="relative">
+                    <input 
+                        v-model="selectedItem.region"  
+                        :disabled="validated ? disabled : ''"
+                        class="pr-1 my-3 font-serif font-normal text-sm lg:text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                    <ChevronDownIcon 
+                        @click="isVisible = !isVisible"
+                        :class=" isVisible ? 'dropdown-icon' : ' dropup-icon'" 
+                        class="cursor-pointer absolute w-5 h-5 ml-2 top-6 right-3 sm:right-24 md:right-20 lg:right-40 md:top-9 xl:right-9 xl:top-8"/>
+                    <div 
+                        :style="{ backgroundImage: `url(${dropdownBg})` }"
+                        :class="isVisible ? 'visible' : 'invisible'" 
+                        class="options absolute bg-transparent -right-4 top-8 sm:right-0 md:-right-8 lg:right-3 xl:-right-28 md:top-11 xl:top-10  sm:w-56 lg:w-72 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <ul class="py-8 sm:py-12 px-2.5 lg:px-4 xl:px-6 xl:py-12 md:py-11">
+                            <li 
+                            v-for="(user, index) in userArray"
+                            :key="index"
+                            @click="selectItem(user)"
+                            class="pb-2 lg:pb-3 text-white cursor-pointer font-serif font-normal flex rounded-md items-center w-full text-xs sm:text-sm lg:text-base" style="color: #fafafa">
+                            <Seed class="w-5 h-5 flex items-center mr-2 text-violet-400" aria-hidden="true"/>
+                            {{ user.region }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">State</label>
                 </div>
@@ -67,23 +87,59 @@
 <script>
 import Navigation from '../components/Navigation.vue'
 import DropDown from '../components/DropDown.vue'
+import Seed from '../components/Seed.vue'
+import ChevronDownIcon from '../components/ChevronDownIcon.vue'
+
 export default {
     data() {
         return {
             image: require('../assets/images/Registerbg.png'),
+            dropdownBg: require('../assets/images/dropdownBg.png'),
             color: '525252',
             userName: '',
             phoneNumber: '',
             occupation: '',
             email: '',
-            region: '',
+            validated: false,
             state: '',
-            password: ''
+            password: '',
+            selectedItem: "",
+            searchQ: "",
+            isVisible: false,
+            userArray: [
+                {
+                    id: 0,
+                    region: 'Middle Belt (North Central)'
+                },
+                {
+                    id: 1,
+                    region: 'North West'
+                },
+                {
+                    id: 2,
+                    region: 'North East'
+                },
+                {
+                    id: 3,
+                    region: 'South West'
+                },
+                {
+                    id: 4,
+                    region: 'South East'
+                },
+                {
+                    id: 5,
+                    region: 'South South'
+                },
+
+            ]
         }
     },
     components: {
         Navigation,
-        DropDown
+        DropDown,
+        Seed,
+        ChevronDownIcon
     },
     methods: {
         handleSubmit() {
@@ -92,7 +148,7 @@ export default {
                 Phonenumber: this.phoneNumber,
                 Occupation: this.occupation,
                 Email: this.email,
-                Region: this.region,
+                Region: this.selectedItem.region,
                 State: this.state,
                 password: this.password,
             };
@@ -104,6 +160,11 @@ export default {
             this.region = '';
             this.state = '';
             this.password = '';
+            this.selectedItem = '';
+        },
+        selectItem(user) {
+            this.selectedItem = user;
+            this.isVisible = false;
         }
     }        
 }
@@ -113,15 +174,42 @@ export default {
 input {
         box-shadow: -5px 1px 20px rgba(0, 0, 0, 0.35);
     }
+.options {
+        mix-blend-mode: multiply;
+        overflow-y: scroll;
+        visibility: hidden;
+        transition: all 0.3s linear;
+        overflow: hidden;
+    }
+
+    .visible {
+        visibility: visible;
+    }
+
+    .dropdown-icon {
+        transform: rotate(0deg);
+        transition: all 0.5s ease;
+    }
+
+    .dropup-icon {
+        transform: rotate(180deg);
+        transition: all 0.5s ease;
+    }
 
     @media (min-width: 1200px) {
         form {
             margin-left: 11.75rem;
         }
 
-        .dropdown {
+        .dropup-icon,
+        .dropdown-icon {
             position: absolute;
-            right: 11rem;
+            right: 11rem
+        }
+
+        .options {
+            position: absolute;
+            right: 1rem;
         }
     }
     @media (min-width: 1250px) {
@@ -144,6 +232,17 @@ input {
     @media (min-width: 1300px) {
         form {
             margin-left: 13.5rem;
+        }
+        .dropup-icon,
+        .dropdown-icon {
+            position: absolute;
+            right: 2rem;
+            top: 2rem
+        }
+
+        .options {
+            position: absolute;
+            right: -7rem;
         }
     }
 
