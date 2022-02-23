@@ -8,6 +8,7 @@ import Register from '../views/Register.vue'
 import ReadMore from '../views/ReadMore.vue'
 import ReaadMore from '../views/ReaadMore.vue'
 import OurMission from '../views/OurMission.vue'
+import ContactUs from '../views/ContactUs.vue'
 
 const routes = [
   {
@@ -54,6 +55,12 @@ const routes = [
     path: '/ourmission',
     name: 'OurMission',
     component: OurMission
+  },
+  ,
+  {
+    path: '/contactUs',
+    name: 'ContactUs',
+    component: ContactUs
   }
 ]
 

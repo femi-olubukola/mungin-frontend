@@ -11,8 +11,7 @@
                 <router-link to="/read-more">
                     <div class="flex space-x-1 items-center">
                         <button class="uppercase font-serif mt-4 lg:font-bold" :style="{color: `${buttonColor}`}">{{ button }}</button>
-                        <ReadMoreButtonSvg class="pt-3"/>
-                        
+                        <ReadMoreButtonSvg class="pt-3"/>    
                     </div>
                 </router-link>
             </div>

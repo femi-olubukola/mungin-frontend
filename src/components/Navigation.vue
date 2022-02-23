@@ -3,9 +3,12 @@
     <nav>
         <div class=" px-6 sm:px-6 md:px-10 lg:pl-16 lg:py-4 xl:pl-32">
             <div class="nav-content flex items-center justify-between">
-                <div @click="reloadPage" class="image-div cursor-pointer flex items-center h-16">
-                    <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
-                </div>
+                
+                <router-link to="home">
+                    <div class="image-div cursor-pointer flex items-center h-16">
+                        <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
+                    </div>
+                </router-link>
                 <div class="nav-links hidden xl:block" v-show="!mobile"> 
                 <ul class="flex items-center">
                     <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
