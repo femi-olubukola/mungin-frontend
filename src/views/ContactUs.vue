@@ -1,8 +1,8 @@
 <template>
     <div class="contactUs">
         <Navigation :style="{ backgroundColor: `${bgColor}` }"/>
-        <div class="contactUs-content lg:flex lg:justify-around px-6 sm:px-6 md:px-10 lg:pl-16 py-12 lg:py-16 xl:pl-32">
-            <div class="hidden lg:block">
+        <div class="contactUs-content md:flex md:justify-between px-6 sm:px-6 md:px-10 lg:pl-16 py-12 lg:py-16 xl:pl-32">
+            <div class="hidden md:block">
                 <h1 class="font-serif text-black font-semibold text-xs lg:text-sm">Follow us on:</h1>
                 <MunginNameless class="my-7"/>
                 <Twitternameless class="my-7"/>
@@ -14,18 +14,17 @@
                 <WeiboNameless class="my-7"/>
                 <YoutubeNameless class="my-7"/>
             </div>
-            <div class="line">
-
+            <div class="line hidden md:block">
             </div>
             <div>
                 <h1 class="text-center font-serif text-black font-semibold capitalize text-2xl lg:text-4xl">Contact Us</h1>   
-                <p class="font-normal font-serif text-xs lg:text-sm text-center mt-2">Fill the form to make enquiries,report issues or for any other reason.</p>
+                <p class="font-normal font-serif text-xs lg:text-sm text-center lg:text-left mt-2">Fill the form to make enquiries,report issues or for any other reason.</p>
                 <form @submit.prevent="handleSubmit" class="flex justify-center flex-col my-4 sm:ml-20 md:ml-24 xl:ml-48 sm:w-9/12 md:w-10/12 xl:w-8/12">
                     <div class="flex items-center">
-                        <div class="w-3/12 md:w-2/12 flex justify-start ">
+                        <div class="w-3/12 md:w-2/12 lg:w-5/12 flex justify-start ">
                             <label class=" font-medium font-serif text-sm lg:text-base text-black">Email Address:</label>
                         </div>
-                        <div class="ml-2 w-full sm:w-8/12">
+                        <div class="ml-2 w-full sm:w-8/12 lg:w-11/12">
                             <input v-model="emailAddress" :color="color" class="pr-2 my-3 pl-2 font-serif font-medium text-sm text-black flex justify-start w-full sm:w-11/12 md:w-11/12 lg:w-10/12 xl:w-full h-10 rounded-lg bg-white mb-2 focus:outline-none" placeholder="Email Address" type="email"/>
                         </div>
                     </div>
