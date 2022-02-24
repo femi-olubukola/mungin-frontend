@@ -1,10 +1,21 @@
 <template>
     <div class="contactUs">
         <Navigation :style="{ backgroundColor: `${bgColor}` }"/>
-        <div class="contactUs-content lg:flex px-6 sm:px-6 md:px-10 lg:pl-16 py-12 lg:py-16 xl:pl-32">
-            <div>
+        <div class="contactUs-content lg:flex lg:justify-around px-6 sm:px-6 md:px-10 lg:pl-16 py-12 lg:py-16 xl:pl-32">
+            <div class="hidden lg:block">
                 <h1 class="font-serif text-black font-semibold text-xs lg:text-sm">Follow us on:</h1>
-                
+                <MunginNameless class="my-7"/>
+                <Twitternameless class="my-7"/>
+                <LinkedInNameless class="my-7"/>
+                <Facebooknameless class="my-7"/>
+                <InstagramNameless class="my-7"/>
+                <TiktokNameless class="my-7"/>
+                <NotionNameless class="my-7"/>
+                <WeiboNameless class="my-7"/>
+                <YoutubeNameless class="my-7"/>
+            </div>
+            <div class="line">
+
             </div>
             <div>
                 <h1 class="text-center font-serif text-black font-semibold capitalize text-2xl lg:text-4xl">Contact Us</h1>   
@@ -44,6 +55,16 @@
 <script>
 import Navigation from '../components/Navigation.vue'
 import Button from '../components/Button.vue'
+import MunginNameless from '../components/MunginNameless.vue'
+import Twitternameless from '../components/Twitternameless.vue'
+import LinkedInNameless from '../components/LinkedInNameless.vue'
+import Facebooknameless from '../components/Facebooknameless.vue'
+import InstagramNameless from '../components/InstagramNameless.vue'
+import TiktokNameless from '../components/TiktokNameless.vue'
+import NotionNameless from '../components/NotionNameless.vue'
+import WeiboNameless from '../components/WeiboNameless.vue'
+import YoutubeNameless from '../components/YoutubeNameless.vue'
+
 export default {
     data() {
         return {
@@ -54,7 +75,16 @@ export default {
     },
     components: {
         Navigation,
-        Button
+        Button,
+        MunginNameless,
+        Twitternameless,
+        LinkedInNameless,
+        Facebooknameless,
+        InstagramNameless,
+        TiktokNameless,
+        NotionNameless,
+        WeiboNameless,
+        YoutubeNameless,
     }
 }
 </script>
@@ -89,5 +119,10 @@ textarea {
     box-sizing: border-box;
     box-shadow: -1px 1px 6px rgba(194, 224, 169, 0.7);
     border-radius: 6px;
+}
+
+.line {
+    border: 0.8px solid rgba(211, 211, 211, 0.4);
+    /* transform: rotate(89.64deg); */
 }
 </style>

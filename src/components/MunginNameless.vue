@@ -1,7 +1,7 @@
 <template>
-    <div class="name flex space-x-2">
+    <div class="name flex items-center space-x-2">
         <img src="../assets/images/MunginNameless.png"/>
-        <h2>Nameless@world.com</h2>
+        <h2 class="capitalize font-bold font-serif text-xs lg:text-sm">Nameless@world.com</h2>
     </div>
 </template>
 
@@ -14,6 +14,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+h2 {
+    color: #83bf4f;
+}
 </style>
