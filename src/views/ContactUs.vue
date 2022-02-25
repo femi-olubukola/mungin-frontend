@@ -31,6 +31,7 @@
                             v-model="emailAddress"
                             :color="color"
                             :placeholder="placeHolder"
+                            required
                             class="pr-2 my-3 pl-4 font-serif font-medium text-sm text-black flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-12 rounded-lg bg-white mb-2 focus:outline-none" type="email"/>
                         </div>
                     </div>
@@ -50,7 +51,10 @@
                             <label class=" font-medium font-serif text-sm lg:text-base lg:font-semibold text-black">Text Body:</label>
                         </div>
                         <div class="ml-2 lg:ml-4 w-full sm:w-8/12 md:w-full">
-                            <textarea v-model="textBody" class="pr-2 my-3 pl-4 py-2 font-serif font-medium text-sm flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-20 md:h-32 lg:h-40 rounded-lg bg-white mb-2 focus:outline-none" placeholder="I will like to " type="message"/>
+                            <textarea 
+                            v-model="textBody"
+                            required
+                            class="pr-2 my-3 pl-4 py-2 font-serif font-medium text-sm flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-20 md:h-32 lg:h-40 rounded-lg bg-white mb-2 focus:outline-none" placeholder="I will like to " type="message"/>
                         </div>
                     </div>
                     <Button/>
@@ -81,7 +85,7 @@ export default {
             textColor: '#333333',
             validated: false,
             emailAddress: '',
-            textSubject: '',
+            textSubject: 'Crop Diversity',
             textBody: ''
         }
     },
