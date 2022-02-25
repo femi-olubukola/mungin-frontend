@@ -3,8 +3,7 @@
     <nav>
         <div class=" px-6 sm:px-6 md:px-10 lg:pl-16 lg:py-4 xl:pl-32">
             <div class="nav-content flex items-center justify-between">
-                
-                <router-link to="home">
+                <router-link to="/">
                     <div class="image-div cursor-pointer flex items-center h-16">
                         <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
                     </div>

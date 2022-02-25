@@ -1,7 +1,7 @@
 <template>
     <div class="name flex space-x-2">
         <img src="../assets/images/YoutubeNameless.png"/>
-        <h2 class="font-serif font-medium capitalize">Nameless@1</h2>
+        <h2 class="font-serif lg:text-base font-medium capitalize">Nameless@1</h2>
     </div>
 </template>
 
