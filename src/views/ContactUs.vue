@@ -91,6 +91,19 @@ export default {
             // this.placeHolder.style.color = white;
         }
     },
+    methods: {
+        handleSubmit() {
+            let data = {
+                EmailAddress: this.emailAddress,
+                TextSubject: this.textSubject,
+                TextBody: this.textBody,
+            };
+            console.log(data)
+            this.emailAddress = '';
+            this.textSubject = '';
+            this.textBody = '';
+        },
+    },
     components: {
         Navigation,
         Button,
