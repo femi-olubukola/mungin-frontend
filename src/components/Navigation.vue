@@ -1,7 +1,7 @@
 <template>
     <header :class="{ 'scrolled-nav' : scrolledNav }" class="relative transition duration-500">
     <nav>
-        <div class=" px-6 sm:px-6 md:px-10 lg:pl-16 lg:py-4 xl:pl-32">
+        <div class="px-6 sm:px-6 md:px-10 lg:pl-16 lg:py-4 xl:pl-32">
             <div class="nav-content flex items-center justify-between">
                 <router-link to="/">
                     <div class="image-div cursor-pointer flex items-center h-16">
@@ -18,7 +18,7 @@
                     </ul>       
                 </div>
                 <div class="form hidden xl:block" >
-                    <SearchButton class="searchbutton cursor-pointer" @click="toggleInput"/>
+                    <SearchBtn class="searchbutton cursor-pointer" @click="toggleInput"/>
                     <transition 
                     enter-active-class="transition duration-100 ease-in-out"
                     enter-from-class="transform scale-95 opacity-0"
@@ -43,7 +43,6 @@
                 <li class="pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">Our mission</li>
                 <li class="pl-4 font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000">News</li>
                 <!-- <li class="font-serif font-medium text-base text-white md:text-lg lg:text-xl hover:font-bold active:font-bold active:ease-in-out hover:active:ease-in-out hover:cursor-pointer active:cursor-pointer duration-1000"><router-link to="join-waiting-list">Join Waiting List</router-link></li> -->
-            
             </ul>
             </transition>
         </div>
@@ -54,7 +53,7 @@
 <script>
 import CancelSvg from '../components/CancelSvg.vue'
 import Seed from '../components/Seed.vue'
-import SearchButton from './SearchBtn.vue'
+import SearchBtn from './SearchBtn.vue'
 import Search from '../components/Search.vue'
 export default {
     data() {
@@ -77,7 +76,7 @@ export default {
     components: {
         CancelSvg,
         Seed,     
-        SearchButton,
+        SearchBtn,
         Search
 
     },
