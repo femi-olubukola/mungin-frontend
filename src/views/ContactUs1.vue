@@ -72,129 +72,233 @@
                 <h1 class="font-serif font-bold text-xl lg:text-2xl text-black">10</h1>
                 <p class="mt-1 md:mt-1.5 font-serif text-xs font-medium text-black">Search result</p>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mt-4">
                 <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
-                        <div class="overflow-hidden shadow-md sm:rounded-lg">
+                        <div class="overflow-hidden">
                             <table class="min-w-full">
                                 <thead class="">
                                     <tr>
-                                        <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-CROP/SETTINGS
-</th>
-<th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-Color
-</th>
-<th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-Category
-</th>
-<th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
-Price
-</th>
-<th scope="col" class="relative py-3 px-6">
-<span class="sr-only">Edit</span>
-</th>
-</tr>
-</thead>
-<tbody>
+                                        <th scope="col" class="flex items-center py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        CROP/SETTINGS
+                                        <img class="pl-1" src="../assets/svg/settingsArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="py-3 px-7 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        States
+                                        <img class="" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="flex py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        Region
+                                        <img class="pl-1" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        Type
+                                        <img class="pl-1" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="flex py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        Year
+                                        <img class="pl-1" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        Version
+                                        <img class="pl-1" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
+                                        <th scope="col" class="flex py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
+                                        Document
+                                        <img class="pl-1" src="../assets/svg/typeArrow.svg"/>
+                                        </th>
 
-<tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
-<td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-Apple MacBook Pro 17"
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Sliver
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Laptop
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-$2999
-</td>
-<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-</td>
-</tr>
-
-<tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
-<td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-Apple Imac 27"
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-White
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
- Desktop Pc
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-$1999
-</td>
-<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-</td>
-</tr>
-
-<tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
-<td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-iPhone 13 Pro
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-White
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Phone
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-$999
-</td>
-<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-</td>
-</tr>
-
-<tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
-<td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-Apple Magic Mouse 2
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-White
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Accessories
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-$99
-</td>
-<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-</td>
-</tr>
-
-<tr class="border-b odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
-<td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-Apple Watch Series 7
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Pink
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-Accessories
-</td>
-<td class="py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-$599
-</td>
-<td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-<a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
- </td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-
-            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class=" bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Black Berry
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Kogi
+                                        </td>
+                                        <td class="py-4 px-6 font-serif font-semibold text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        North Central
+                                        </td>
+                                        <td class="py-4 px-6 font-serif font-semibold text-sm text-blackwhitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 px-6 font-serif font-semibold text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2021
+                                        </td>
+                                        <td class="py-4 px-6 font-serif font-semibold text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Original
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class="bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Sorghum, Grain
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Ibadan
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Northern
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2020
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Revision
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                            Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class="bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Sorghum, Grain
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Ibadan
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Northern
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2020
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Revision
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                            Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class="bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Sorghum, Grain
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Ibadan
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Northern
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2020
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Revision
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                            Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class="bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Sorghum, Grain
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Ibadan
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Northern
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2020
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Revision
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                            Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                        <tr style="background-color: #fafafa;" class="h-2 -pt-2">
+                                            <td style="color: #fafafa" class="hey h-1" >.</td>
+                                        </tr>
+                                        <tr class="bg-white rounded-2xl even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700 dark:border-gray-600">
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 text-sm font-serif font-bold whitespace-nowrap dark:text-white">
+                                        Sorghum, Grain
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Ibadan
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Northern
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Crop Profile
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        2020
+                                        </td>
+                                        <td class="py-4 font-serif font-semibold px-6 text-sm text-black whitespace-nowrap dark:text-gray-400">
+                                        Revision
+                                        </td>
+                                        <td style="color: rgba(131, 191, 79, 1);" class="py-4 px-6 font-serif font-medium text-sm whitespace-nowrap dark:text-gray-400">
+                                            Crop Profile For blackberry<br> In Nigeria
+                                        </td>
+                                        <td class="pr-2">
+                                            <img src="../assets/svg/moreOption.svg"/>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end items-center">
+                <h1 style="color: #B5B5B5;" class="flex flex-row items-center font-serif font-medium"><img class="pr-1" src="../assets/svg/arrow-left.svg"/> Prev</h1>
+                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">1</h1>
+                <!-- <div style="background-color: #B5b5b5; color: #b5b5b5 background: #F8F8F8; border: 0.3px solid rgba(211, 211, 211, 0.3); box-sizing: border-box; border-radius: 6px;" class="w-5 flex justify-center items-center">1</div> -->
+                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">2</h1>
+                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">3</h1>
+                <h1 class="flex flex-row items-center font-serif pl-2">Next<img class="pl-1" src="../assets/svg/arrow-right.svg"/></h1>
+            </div>
+            </div>    
             
         </div>
     </div>
@@ -247,6 +351,9 @@ export default {
 </script>
 
 <style scoped>
+.hey {
+    font-size: 0.1px;
+}
 .nav {
     /* background: #FAFAFA; */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03);
