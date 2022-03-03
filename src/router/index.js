@@ -10,6 +10,7 @@ import ReaadMore from '../views/ReaadMore.vue'
 import OurMission from '../views/OurMission.vue'
 import ContactUs from '../views/ContactUs.vue'
 import ContactUs1 from '../views/ContactUs1.vue'
+import CropProfile from '../views/CropProfile.vue'
 
 const routes = [
   {
@@ -66,7 +67,13 @@ const routes = [
     path: '/contactUs1',
     name: 'ContactUs1',
     component: ContactUs1
+  },
+  {
+    path: '/cropProfile',
+    name: 'CropProfile',
+    component: CropProfile
   }
+
 ]
 
 const router = createRouter({

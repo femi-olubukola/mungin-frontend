@@ -1,12 +1,12 @@
 <template>
     <div>
         <Navigation class="nav" :style="{ backgroundColor: `${bgColor}` }"/>
-        <div class="contactUs1 px-6 pt-4 sm:px-6 md:pt-6 md:px-10 lg:px-16 lg:py-4 xl:pl-32">
+        <div class="contactUs1 px-6 pt-4 sm:px-6 md:pt-6 lg:pt-8 md:px-10 lg:px-16 lg:py-4 xl:px-32">
             <div class="flex flex-row justify-between items-start">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-2">
                         <div class="flex" v-if="amount">
-                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base h-12 w-14">Show</div>
-                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base w-14">10<ResultNumberDropDownSvg/></div>
+                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base h-12 w-14 lg:w-16">Show</div>
+                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base lg:text-lg lg:font-bold w-14">10<ResultNumberDropDownSvg/></div>
                         </div>
                         <div v-show="input" class="relative">
                             <input class="w-44 h-10 font-serif px-3 outline-none border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="relative search">
                         <SearchBtn @click="toggleInput" class="sm:hidden"/>
-                        <input class="hidden sm:block w-44 md:w-56 lg:w-64 h-10 sm:h-12 font-serif px-3 outline-none border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
+                        <input class="hidden sm:block w-44 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-10 sm:h-12 font-serif px-3 outline-none border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
                          <CropSearchSvg class="hidden sm:block absolute w-2 right-5 top-4" />
                     </div>
             </div>
@@ -290,13 +290,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-end items-center">
-                <h1 style="color: #B5B5B5;" class="flex flex-row items-center font-serif font-medium"><img class="pr-1" src="../assets/svg/arrow-left.svg"/> Prev</h1>
-                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">1</h1>
-                <!-- <div style="background-color: #B5b5b5; color: #b5b5b5 background: #F8F8F8; border: 0.3px solid rgba(211, 211, 211, 0.3); box-sizing: border-box; border-radius: 6px;" class="w-5 flex justify-center items-center">1</div> -->
-                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">2</h1>
-                <h1 class="font-serif pl-2 text-base -mt-0.5 font-bold">3</h1>
-                <h1 class="flex flex-row items-center font-serif pl-2">Next<img class="pl-1" src="../assets/svg/arrow-right.svg"/></h1>
+                <div class="flex justify-end items-center space-x-5">
+                <h1 style="color: #B5B5B5;" class=" flex flex-row items-center font-serif font-medium"><img class="pr-1" src="../assets/svg/arrow-left.svg"/> Prev</h1>
+                <div class="relative">
+                    <h1 @mouseover="firstNumber = true" @mouseleave="firstNumber = false" class="font-serif text-base -mt-0.5 font-bold ">1</h1>
+                    <div v-show="firstNumber" style="background-color: #B5b5b5; border: 0.3px solid rgba(211, 211, 211, 0.3); box-sizing: border-box; border-radius: 6px;" class="font-serif text-base font-bold  w-5 absolute -left-2 -top-0.5 flex justify-center items-center">1</div>
+                </div>
+                <div class="relative">
+                    <h1 @mouseover="secondNumber = true" @mouseleave="secondNumber = false" class="font-serif text-base -mt-0.5 font-bold ">2</h1>
+                    <div v-show="secondNumber" style="background-color: #B5b5b5; border: 0.3px solid rgba(211, 211, 211, 0.3); box-sizing: border-box; border-radius: 6px;" class="font-serif text-base font-bold  w-5 absolute -left-2 -top-0.5 flex justify-center items-center">2</div>
+                </div>
+                <div class="relative">
+                    <h1 @mouseover="thirdNumber = true" @mouseleave="thirdNumber = false" class="font-serif text-base -mt-0.5 font-bold ">3</h1>
+                    <div v-show="thirdNumber" style="background-color: #B5b5b5; border: 0.3px solid rgba(211, 211, 211, 0.3); box-sizing: border-box; border-radius: 6px;" class="font-serif text-base font-bold  w-5 absolute -left-2 -top-0.5 flex justify-center items-center">3</div>
+                </div>
+                <h1 class="flex flex-row items-center font-serif font-semibold">Next<img class="pl-1" src="../assets/svg/arrow-right.svg"/></h1>
             </div>
             </div>    
             
@@ -339,6 +347,9 @@ export default {
             fourthhoveredElement: false,
             fifthhoveredElement: false,
             sixthhoveredElement: false,
+            firstNumber: false,
+            secondNumber: false,
+            thirdNumber: false,
         }
     },
     methods: {
