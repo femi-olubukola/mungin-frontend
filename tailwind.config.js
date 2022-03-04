@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'serif': ['Raleway'],
+      'sans': ['Lato']
       // 'sans': ['Raleway'],
       // 'body': ['Poppins']
     },

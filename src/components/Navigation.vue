@@ -148,13 +148,16 @@ export default {
 body{
     font-family: 'Raleway'; 
 }
+header {
+    max-width: 100vw;
+}
 .dropdown-nav {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08); 
     background-color: #83BF4F;
 }
 
 .nav-content {
-    width: 100%;
+    width: 90%;
 }
 
 button {
