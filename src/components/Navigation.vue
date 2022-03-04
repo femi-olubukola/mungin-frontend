@@ -157,7 +157,7 @@ header {
 }
 
 .nav-content {
-    width: 90%;
+    width: 100%;
 }
 
 button {

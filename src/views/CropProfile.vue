@@ -1,15 +1,94 @@
 <template>
     <div class="cropProfile">
-        <Navigation class="nav"/>
+        
         <!-- <div class="cropProfile-content px-6 pt-4 sm:px-6 md:pt-6 lg:pt-8 md:px-10 lg:px-16 lg:py-4 xl:px-32"> -->
         <div class="cropProfile-content w-screen relative">
-            <div class="flex w-screen overscroll-x-none">    
-                <aside class="w-52 lg:h-screen hidden lg:block relative" v-show="showcropProfile">
-                    <ShowCropProfileText @click="togglecropProfile" class="absolute -right-4 top-7"/>
-                    <div class="py-4 lg:py-8 px-4 bg-black dark:bg-gray-800">
+            <Navigation class="nav"/>
+            <div class="flex w-screen overscroll-x-none">   
+                <aside  v-show="cropProfile" class="w-14 relative">
+                    <HideCropProfileText @click="togglecropProfile" class="cursor-pointer absolute -right-4 top-7"/>
+                    <div class="py-4 px-2 lg:py-8 bg-black dark:bg-gray-800">
                         <ul class="space-y-2 lg:space-y-3">
                             <li>
-                                <div class="flex px-2 items-center text-base font-normal text-gray-900 rounded-lg dark:hover:bg-gray-700">
+                                <div class="flex items-center px-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/seed-outline.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/house-2.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/setting-2.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/background.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/flag-2.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/people.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/book.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/global-search.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/judge.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/pet.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/milk.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/signpost.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/like.svg"/>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="../assets/svg/filter-search.svg"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+ 
+                <aside class="w-64 lg:h-screen hidden lg:block relative" v-show="showcropProfile">
+                    <ShowCropProfileText @click="togglecropProfile" class="cursor-pointer absolute -right-4 top-7"/>
+                    <div class="py-4 lg:py-4 px-3 bg-black dark:bg-gray-800">
+                        <ul class="space-y-2 lg:space-y-3">
+                            <li>
+                                <div class="flex p-2 items-center text-base font-normal text-gray-900 rounded-lg dark:hover:bg-gray-700">
                                     <img src="../assets/svg/seed-outline.svg"/>
                                         <span class="ml-2 text-white font-normal font-sans">Crop Data</span>
                                 </div>
@@ -87,7 +166,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <div class="flex items-center pt-2 pb-5 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <img src="../assets/svg/filter-search.svg"/>
                                         <span class="text-white flex-1 ml-3 whitespace-nowrap">Chemical Controls</span>
                                 </div>
@@ -95,85 +174,8 @@
                         </ul>
                     </div>
                 </aside>
-                <aside  v-show="cropProfile" class="w-20 absolute left-0" >
-                    <HideCropProfileText @click="togglecropProfile" class="absolute -right-4 top-7"/>
-                    <div class="py-4 lg:py-8 bg-black dark:bg-gray-800">
-                        <ul class="space-y-2 lg:space-y-3">
-                            <li>
-                                <div class=" text-base font-normal text-gray-900 rounded-lg dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/seed-outline.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/house-2.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/setting-2.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/background.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/flag-2.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/people.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/book.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/global-search.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/judge.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/pet.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/milk.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/signpost.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/like.svg"/>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <img src="../assets/svg/filter-search.svg"/>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-                <!-- <div class="px-6 pt-4 sm:py-4 pl-4"> -->
-                <div class="w-full px-6  pt-4 sm:py-4">
+                                <!-- <div class="px-6 pt-4 sm:py-4 pl-4"> -->
+                <div class="w-full px-6  py-4 sm:py-4">
                     <div class="h1 w-11/12">
                         <h1 class="font-semibold lg:font-bold text-sm lg:text-base xl:text-lg font-sans">Crop Profile for Blackberry in North Carolina</h1>
                     </div>
@@ -185,7 +187,7 @@
                             :key="title.id"
                             :label="title.label"
                             :content="title.content">
-                            <div class="mt-1 sm:mt-2 w-3/12 md:w-2/12">
+                            <div class="label-div mt-1 sm:mt-2 w-3/12 sm:w-2/12 md:w-2/12">
                                 <label :style="{  color: `${labelColor}`}" class=" p-0.5 font-semibold font-sans text-sm lg:text-base">{{ title.label }}</label>
                             </div>
                             <div class="mt-1 sm:mt-2 w-9/12">
@@ -201,8 +203,7 @@
                         <p class="w-full font-sans text-base font-medium lg:font-bold" :style="{  color: `${color}`}">The caneberry industry has undergone significant growth in the southern United States in the past decade. The development of shipping-quality, fresh market blackberry cultivars, along with recognition of the health benefits associated with eating berries, have facilitated the phenomenal increase in the production of blackberries throughout the southern region of the US. Since the early 2000's, the acreage devoted to caneberries has increased throughout the southern United States in all grower categories:
 
                             small-scale (less than 1acre farms) for local and pick-your-own (PYO) sales
-                            medium-scale (between 1-10) for local sales and PYO
-                            large-scale (farms with 10 or more acres that produce blackberry for wholesale marketing)
+                            medium-scale (between 1-10)
 </p>
                     </div>
                 </div>
@@ -310,5 +311,26 @@ label {
 
 .line {
     border-bottom:  0.2px solid rgba(211, 211, 211, 0.3);
+}
+
+@media (min-width: 1024px) {
+    .label-div {
+        width: 14%;
+    }
+}
+@media (min-width: 1200px) {
+    .label-div {
+        width: 11%;
+    }
+}
+@media (min-width: 1300px) {
+    .label-div {
+        width: 10%;
+    }
+}
+@media (min-width: 1400px) {
+    .label-div {
+        width: 9%;
+    }
 }
 </style>
