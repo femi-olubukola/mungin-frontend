@@ -8,7 +8,7 @@
                         <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
                     </div>
                 </router-link>
-                <div class="nav-links hidden xl:block" v-show="!mobile"> 
+                <div class="nav-links w-7/12 hidden xl:block" v-show="!mobile"> 
                 <ul class="flex items-center">
                     <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
                     <li @click="scrollToProcess" @mouseover="secHover = true" @mouseleave="secHover = false" class=" font-serif  font-bold text-base mx-6 relative">Process<Seed v-if="secHover"  class="absolute left-5"/></li>
@@ -17,9 +17,13 @@
                     <!-- <li @mouseover="fifthHover = true" @mouseleave="fifthHover = false" class=" font-serif font-bold text-base mx-6 relative" :style="{ color: `${color}` }"><router-link to="join-waiting-list">Join Waiting List</router-link><Seed v-if="fifthHover" class="absolute left-10"/></li> -->
                     </ul>       
                 </div>
-                <div class="form hidden xl:block" >
+                <div v-show="!input" class="form hidden xl:block relative">
+                        <input placeholder="Search" class="font-sans bg-transparent pl-6 outline-none font-sans"/>
+                        <SecSearchButton class="absolute left-0 top-0"/>
+                    </div>
+                <div class="form hidden xl:block">
                     <SearchBtn class="searchbutton cursor-pointer" @click="toggleInput"/>
-                    <transition 
+                    <!-- <transition 
                     enter-active-class="transition duration-100 ease-in-out"
                     enter-from-class="transform scale-95 opacity-0"
                     enter-to-class="transform scale-100 opacity-100"
@@ -27,7 +31,8 @@
                     leave-from-class="transform scale-100 opacity-100"
                     leave-to-class="transform scale-95 opacity-0">
                         <Search v-show="input" class="absolute left-0 w-9/12 -bottom-6"/>
-                    </transition>
+                    </transition> -->
+                    
                 </div>
             </div>
             <div class="icon flex absolute items-center right-6 md:right-10 lg:right-16 top-1/4 sm:top-1/3"> 
@@ -55,6 +60,8 @@ import CancelSvg from '../components/CancelSvg.vue'
 import Seed from '../components/Seed.vue'
 import SearchBtn from './SearchBtn.vue'
 import Search from '../components/Search.vue'
+import SecSearchButton from '../components/SecSearchButton.vue'
+
 export default {
     data() {
       return {
@@ -77,7 +84,8 @@ export default {
         CancelSvg,
         Seed,     
         SearchBtn,
-        Search
+        Search,
+        SecSearchButton
 
     },
     created() {
@@ -164,11 +172,21 @@ button {
     background-color: #17233C;
 }
 
+::placeholder {
+    color: #000;
+    font-family: 'Lato';
+}
+
 li:hover, 
 li:active {
   font-weight: 700;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+
+input {
+    border-bottom: 2px solid #000;
+    border-radius: 0;
 }
 
 @media (min-width: 1024px) {
