@@ -18,11 +18,15 @@
                     </ul>       
                 </div>
                 <div v-show="!input" class="form hidden xl:block relative">
-                        <input placeholder="Search" class="font-sans bg-transparent pl-6 outline-none font-sans"/>
+                        <input placeholder="Search" class="bolo w-56 font-sans bg-transparent pl-6 outline-none delay-75"/>
                         <SecSearchButton class="absolute left-0 top-0"/>
+                        <SecCancelBtn @click="toggleInput" class="absolute right-0 top-0.5"/>
                     </div>
-                <div class="form hidden xl:block">
-                    <SearchBtn class="searchbutton cursor-pointer" @click="toggleInput"/>
+                <div v-show="input" class="form hidden xl:block">
+                    <SearchBtn class="searchbutton cursor-pointer" 
+                    @click="toggleInput"
+                    @blur="input = true"
+                    />
                     <!-- <transition 
                     enter-active-class="transition duration-100 ease-in-out"
                     enter-from-class="transform scale-95 opacity-0"
@@ -61,6 +65,7 @@ import Seed from '../components/Seed.vue'
 import SearchBtn from './SearchBtn.vue'
 import Search from '../components/Search.vue'
 import SecSearchButton from '../components/SecSearchButton.vue'
+import SecCancelBtn from '../components/SecCancelBtn.vue'
 
 export default {
     data() {
@@ -76,7 +81,7 @@ export default {
           thirdHover: false,
           fourthHover: false,
           fifthHover: false,
-          input: false
+          input: true
         }
     },
     props: ['color'],
@@ -85,8 +90,8 @@ export default {
         Seed,     
         SearchBtn,
         Search,
-        SecSearchButton
-
+        SecSearchButton,
+        SecCancelBtn
     },
     created() {
             window.addEventListener("resize", this.checkScreen);
@@ -187,7 +192,12 @@ li:active {
 input {
     border-bottom: 2px solid #000;
     border-radius: 0;
+    
 }
+
+.bolo{
+    transition: width 0.005s ease-in-out;
+} 
 
 @media (min-width: 1024px) {
     .icon { 
