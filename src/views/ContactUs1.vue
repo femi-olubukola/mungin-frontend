@@ -6,7 +6,26 @@
                     <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-2">
                         <div class="flex" v-if="amount">
                             <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base h-12 w-14 lg:w-16">Show</div>
-                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base lg:text-lg lg:font-bold w-14">10<ResultNumberDropDownSvg/></div>
+                            <div class="resultNumber font-serif bg-white flex justify-center items-center text-xs sm:text-base lg:text-lg lg:font-bold w-14 relative">10
+                                <ResultNumberDropDownSvg
+                                @click="isVisible = !isVisible"
+                                :class=" isVisible ? 'dropdown-icon' : ' dropup-icon'" 
+                                class="cursor-pointer absolute w-5 h-5 ml-2 top-6 right-3 sm:right-24 md:right-20 lg:right-40 md:top-9 xl:-right-1 xl:top-5"/>
+                                <div
+                                :class="isVisible ? 'visible' : 'invisible'" 
+                                class="options absolute -right-4 top-8 sm:right-0 md:-right-8 lg:right-3 xl:-right-28 md:top-11 xl:top-10  sm:w-56 lg:w-72 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                    <ul class="py-8 sm:py-12 px-2.5 lg:px-4 xl:px-6 xl:py-12 md:py-11">
+                                        <li 
+                                        v-for="(user, index) in userArray"
+                                        :key="index"
+                                        @click="selectItem(user)"
+                                        class="pb-2 lg:pb-3 text-black cursor-pointer font-serif font-normal flex rounded-md items-center w-full text-xs sm:text-sm lg:text-base" style="color: #fafafa">
+                                        <Seed class="w-5 h-5 flex items-center mr-2 text-violet-400" aria-hidden="true"/>
+                                        {{ user.number }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div v-show="input" class="relative">
                             <input class="w-44 h-10 font-serif px-3 outline-none border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
@@ -53,7 +72,7 @@
                                 <PDFComponent class="absolute left-2" v-show="fifthhoveredElement"/>
                             </div>
                             <div
-                            class="relative flex justify-center items-center"
+                            class="relative flex justify-center items-center cursor-pointer"
                                 @mouseover="sixthhoveredElement = true" @mouseleave="sixthhoveredElement = false">
                                     <p style="color: rgba(131, 191, 79, 1);" class="font-serif font-medium lg:font-bold text-xs lg:text-sm pl-1 md:pl-2 lg:pl-3 xl:pl-4">
                                     Print
@@ -78,7 +97,7 @@
                         <div class="overflow-hidden">
                             <table class="min-w-full">
                                 <thead class="">
-                                    <tr>
+                                    <tr class="">
                                         <th scope="col" class="flex items-center py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
                                         CROP/SETTINGS
                                         <img class="pl-1" src="../assets/svg/settingsArrow.svg"/>
@@ -350,12 +369,60 @@ export default {
             firstNumber: false,
             secondNumber: false,
             thirdNumber: false,
+            selectedItem: "",
+            isVisible: false,
+            userArray: [
+                {
+                    id: 0,
+                    number: '1'
+                },
+                {
+                    id: 1,
+                    number: '2'
+                },
+                {
+                    id: 2,
+                    number: '3'
+                },
+                {
+                    id: 3,
+                    number: '4'
+                },
+                {
+                    id: 4,
+                    number: '5'
+                },
+                {
+                    id: 5,
+                    region: '6'
+                },
+                {
+                    id: 6,
+                    number: '7'
+                },
+                {
+                    id: 7,
+                    number: '8'
+                },
+                {
+                    id: 8,
+                    number: '9'
+                },
+                {
+                    id: 9,
+                    number: '10'
+                }
+            ]
         }
     },
     methods: {
         toggleInput() {
             this.input = !this.input;
             this.amount = !this.amount;
+        },
+        selectItem(user) {
+            this.selectedItem = user;
+            this.isVisible = false;
         }
     }
 }
@@ -399,6 +466,17 @@ input {
     box-sizing: border-box;
     box-shadow: -4px 4px 7px rgba(131, 191, 79, 0.2);
     border-radius: 3px;
+}
+
+.options {
+    overflow-y: scroll;
+    visibility: hidden;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+
+.visible {
+    visibility: visible;
 }
 
 @media (max-width: 640px) {
