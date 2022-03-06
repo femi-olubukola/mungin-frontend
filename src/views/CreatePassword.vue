@@ -9,7 +9,7 @@
                 <div class="py-4 relative">
                     <input 
                     :type="visibility" 
-                    v-model="createPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
+                    v-model="createPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required"/>
                     <span class="flex justify-start items-center w-1/3">
                         <EyeVisibleNo class="no" @click="showPassword"/>
                         <EyeVisibleYes class="no" v-show="show"  @click="hidePassword"/>
@@ -21,7 +21,7 @@
                 <div class="py-4 relative">
                     <input 
                     :type="visibility" 
-                    v-model="newPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none"/>
+                    v-model="newPassword" class="font-serif font-normal text-sm text-black pl-4 pr-9 sm:pr-8 lg:pr-14 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required"/>
                     <span class="flex justify-start items-center w-1/3">
                         <EyeVisibleNo class="no" @click="showPassword"/>
                         <EyeVisibleYes v-show="show" class="no"  @click="hidePassword"/>

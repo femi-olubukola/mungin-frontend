@@ -32,7 +32,7 @@
                             :color="color"
                             :placeholder="placeHolder"
                             required
-                            class="pr-2 my-3 pl-4 font-serif font-medium text-sm text-black flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-12 rounded-lg bg-white mb-2 focus:outline-none" type="email"/>
+                            class="pr-2 my-3 pl-4 font-serif font-medium text-sm text-black flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-12 rounded-lg bg-white mb-2 focus:outline-none border-none required" type="email"/>
                         </div>
                     </div>
                     <div class="flex items-center">
@@ -54,7 +54,7 @@
                             <textarea 
                             v-model="textBody"
                             required
-                            class="pr-2 my-3 pl-4 py-2 font-serif font-medium text-sm flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-20 md:h-32 lg:h-40 rounded-lg bg-white mb-2 focus:outline-none" placeholder="I will like to " type="message"/>
+                            class="pr-2 my-3 pl-4 py-2 font-serif font-medium text-sm flex justify-start w-full sm:w-11/12 md:w-full lg:w-full xl:w-full h-20 md:h-32 lg:h-40 rounded-lg bg-white mb-2 focus:outline-none required" placeholder="I will like to " type="message"/>
                         </div>
                     </div>
                     <Button/>

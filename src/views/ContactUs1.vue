@@ -64,7 +64,7 @@
                     </div>
                     <div class="relative search">
                         <SearchBtn @click="toggleInput" class="sm:hidden"/>
-                        <input class="hidden sm:block w-44 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-10 sm:h-12 font-serif px-3 outline-none border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
+                        <input class="hidden outline-none sm:block w-44 sm:w-60 md:w-64 lg:w-72 xl:w-80 h-10 sm:h-12 font-serif px-3 border-none text-xs lg:text-sm" type="text" placeholder="Search Crop State..."/>
                          <CropSearchSvg class="hidden sm:block absolute w-2 right-5 top-4" />
                     </div>
             </div>
@@ -84,7 +84,7 @@
                                         <img class="pl-1" src="../assets/svg/settingsArrow.svg"/>
                                         </th>
                                         <th scope="col" class="py-3 px-7 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
-                                        States
+                                        States  
                                         <img class="" src="../assets/svg/typeArrow.svg"/>
                                         </th>
                                         <th scope="col" class="flex py-3 px-6 text-xs font-medium tracking-wider text-left text-black font-serif uppercase dark:text-gray-400">
@@ -390,6 +390,7 @@ input {
     /* border: 0.4px solid rgba(211, 211, 211, 0.4); */
     box-sizing: border-box;
     border-radius: 6px;
+    outline: none;
 }
 
 .hoveredElement {

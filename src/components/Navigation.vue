@@ -18,7 +18,7 @@
                     </ul>       
                 </div>
                 <div v-show="!input" class="form hidden xl:block relative">
-                        <input placeholder="Search" class="bolo w-56 font-sans bg-transparent pl-6 outline-none delay-75"/>
+                        <input placeholder="Search" class="bolo w-56 font-sans bg-transparent pl-6 outline-none transition delay-75 ease-linear"/>
                         <SecSearchButton class="absolute left-0 top-0"/>
                         <SecCancelBtn @click="toggleInput" class="absolute right-0 top-0.5"/>
                     </div>

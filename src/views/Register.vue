@@ -13,25 +13,25 @@
                     <label class=" font-medium font-serif text-base text-black">Username</label>
                 </div>
                 <div>
-                    <input v-model="userName" class="pr-1 my-3 pl-4 font-serif font-normal text-base text-black flex justify-start w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-white border  border-solid mb-2 focus:outline-none" type="name"/>
+                    <input v-model="userName" class="pr-1 my-3 pl-4 font-serif font-normal text-base text-black flex justify-start w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-white border  border-solid mb-2 focus:outline-none required" type="name"/>
                 </div>
                 <div class="w-3/12 mr-2 font-serif flex justify-start ">
                     <label class=" font-medium text-base text-black">Phonenumber</label>
                 </div>
                 <div>
-                    <input v-model="phoneNumber" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4  flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full  h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="tel"/>
+                    <input v-model="phoneNumber" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4  flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full  h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="tel"/>
                 </div>
                 <div class="w-3/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Occupation</label>
                 </div>
                 <div>
-                    <input v-model="occupation" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12  xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="text"/>
+                    <input v-model="occupation" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12  xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="text"/>
                 </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Email</label>
                 </div>
                 <div>
-                    <input v-model="email" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full 12 sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                    <input v-model="email" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full 12 sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
                 </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Region</label>
@@ -40,7 +40,7 @@
                     <input 
                         v-model="selectedItem.region"  
                         :disabled="validated ? disabled : ''"
-                        class="pr-1 my-3 font-serif font-normal text-sm lg:text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                        class="pr-1 my-3 font-serif font-normal text-sm lg:text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
                     <ChevronDownIcon 
                         @click="isVisible = !isVisible"
                         :class=" isVisible ? 'dropdown-icon' : ' dropup-icon'" 
@@ -65,13 +65,13 @@
                     <label class=" font-medium text-base text-black flex justify-start ">State</label>
                 </div>
                 <div>
-                    <input v-model="state" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="text"/>
+                    <input v-model="state" class="pr-1 my-3  border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="text"/>
                 </div>
                 <div class="w-8/12 font-serif">
-                    <label class=" font-medium text-base text-black flex justify-start ">Password</label>
+                    <label class=" font-medium text-base text-black flex justify-start">Password</label>
                 </div>
                 <div>
-                    <input v-model="password" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="password"/>
+                    <input v-model="password" class="pr-1 my-3 border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="password"/>
                 </div>
                 <div class="w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-8/12 flex justify-start mb-8">
                     <h1 class=" font-medium font-serif text-sm text-black">At least 8 characters (and up to 100 characters),5 or more unique characters and must contain at least 3 of the following: uppercase,lowercase,numeric, or special characters. The allowed special characters are ~ ! @ # $ % ^ * - _ = + : , . ?  [no spaces allowed</h1>
@@ -188,7 +188,7 @@ input {
 
     .dropdown-icon {
         transform: rotate(0deg);
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
     }
 
     .dropup-icon {

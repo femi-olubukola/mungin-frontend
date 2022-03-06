@@ -10,7 +10,7 @@
                     <label class=" font-medium font-serif text-base md:text-lg text-black">Enter your valid email please</label>
                 </div>
                 <div class="py-4">
-                    <input v-model="email" class="pl-4 font-serif font-normal text-sm text-black flex justify-start w-10/12 sm:w-8/12 lg:w-7/12 xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none" type="email"/>
+                    <input v-model="email" class="pl-4 font-serif font-normal text-sm text-black flex justify-start w-10/12 sm:w-8/12 lg:w-7/12 xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="email"/>
                 </div>
                 <div class="flex justify-start">
                     <button style="background-color: #17233C;" class="font-medium w-10/12 12 sm:w-8/12 h-10 md:h-14 lg:w-7/12  xl:w-5/12 rounded-xl text-white font-serif mt-2">Submit</button>
